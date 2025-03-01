@@ -11,29 +11,7 @@ body {
 }
 
 /* Sidebar */
-.sidebar {
-    width: 220px;
-    background: #121212;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    height: 100%;
-    position: fixed;
-}
 
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.sidebar a.active, .sidebar a:hover {
-    background: #333;
-}
 
 /* Main Content */
 .main-content {
