@@ -10,12 +10,17 @@
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
-        <h2>Study Room</h2>
-        <a href="{{ url_for('dashboard') }}">Dashboard</a>
-        <a href="{{ url_for('solo_study') }}" class="active">Solo Study</a>
-        <a href="">Study Goals</a>
-        <a href="">Chat Rooms</a>
-        <a href="">Leaderboard</a>
+        <div class="logo">
+            <h2>📚 STUDY.IO</h2>
+        </div>
+        <a href="{{ url_for('dashboard') }}">🏠 Dashboard</a>
+        <a href="{{ url_for('solo_study') }}">📖 Solo Study</a>
+        <a href="">🎯 Study Goals</a>
+        <a href="">💬 Chat Rooms</a>
+        <a href="">📊 Study Stats</a>
+        <a href="">🏆 Leaderboard</a>
+        <a href="{{ url_for('community') }}">👥 Communities</a>
+        <a href="{{ url_for('index') }}">⚙️ Logout</a>
     </div>
 
     <!-- Main Content -->
