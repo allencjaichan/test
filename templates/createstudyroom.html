@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Study Room</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-96">
+        <h2 class="text-2xl font-bold text-gray-700 text-center mb-4">Create a Study Room</h2>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                <div class="mb-4">
+                    {% for category, message in messages %}
+                        <div class="text-{{ 'red' if category == 'error' else 'green' }}-500 text-center mb-2">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form id="studyRoomForm" action="{{ url_for('createstudyroom') }}" method="POST" class="space-y-4">
+            <div>
+                <label for="room_name" class="block text-sm font-medium text-gray-600">Study Room Name</label>
+                <input type="text" id="room_name" name="room_name" required 
+                    class="w-full p-2 border border-gray-300 rounded mt-1 focus:ring focus:ring-indigo-300">
+            </div>
+            <div>
+                <label for="room_code" class="block text-sm font-medium text-gray-600">Unique Code</label>
+                <input type="text" id="room_code" name="room_code" required 
+                    class="w-full p-2 border border-gray-300 rounded mt-1 focus:ring focus:ring-indigo-300">
+            </div>
+            <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-lg font-semibold">Create Study Room</button>
+        </form>
+    </div>
+</body>
+</html>

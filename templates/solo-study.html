@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Study</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='solo-study.css') }}">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Study Room</h2>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('solo_study') }}" class="active">Solo Study</a>
+        <a href="">Study Goals</a>
+        <a href="">Chat Rooms</a>
+        <a href="">Leaderboard</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="study-section">
+            <h1>Solo Study Room</h1>
+            <p>Enhance focus with timers, music, and focus mode.</p>
+
+            <!-- Pomodoro Timer -->
+            <div class="pomodoro-timer">
+                <h2>Pomodoro Timer</h2>
+                <div class="timer-display">25:00</div>
+                <button id="start-timer">Start</button>
+                <button id="pause-timer">Pause</button>
+                <button id="reset-timer">Reset</button>
+            </div>
+
+            <!-- Study Music & Background -->
+            <div class="study-music">
+                <h2>Study Music</h2>
+                <select id="music-select">
+                    <option value="lofi">Lo-Fi Beats</option>
+                    <option value="nature">Nature Sounds</option>
+                    <option value="classical">Classical Music</option>
+                </select>
+                <button id="play-music">Play</button>
+            </div>
+
+            <!-- Focus Mode -->
+            <div class="focus-mode">
+                <h3>Focus Mode</h3>
+                <label class="switch">
+                    <input type="checkbox" id="focusToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <!-- Notepad -->
+            <div class="notepad">
+                <h2>Notepad</h2>
+                <textarea id="note-area" placeholder="Write your notes here..."></textarea>
+                <button id="save-note">Save</button>
+            </div>
+
+            <!-- To-Do List -->
+            <div class="todo-list">
+                <h2>To-Do List</h2>
+                <input type="text" id="todo-input" placeholder="Add a task...">
+                <button id="add-task">Add</button>
+                <ul id="todo-items"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='solo-study.js') }}"></script>
+</body>
+</html>

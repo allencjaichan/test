@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study.io - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>📚 STUDY.IO</h2>
+        <a href="{{ url_for('dashboard') }}" class="active">🏠 Dashboard</a>
+        <a href="{{ url_for('solo_study') }}">📖 Solo Study</a>
+        <a href="">🎯 Study Goals</a>
+        <a href="">💬 Chat Rooms</a>
+        <a href="">📊 Study Stats</a>
+        <a href="">🏆 Leaderboard</a>
+        <a href="{{ url_for('community') }}">👥 Communities</a>
+        <a href="{{ url_for('index') }}">⚙️ Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h2>👋 Welcome Back, <b>User</b></h2>
+            <p>Enjoy your study session and stay focused!</p>
+            <img src="{{ url_for('static', filename='study-banner.jpg') }}" class="banner-image" alt="Study Room">
+            
+            <div class="buttons">
+                <a href="" class="btn">Create a Group</a>
+                <a href="" class="btn secondary">Join a Group</a>
+            </div>
+        </div>
+
+        <!-- Communities Section -->
+        <div class="study-room-options">
+            <h2>👥 Study Communities</h2>
+            <p>Find a study group that matches your focus goals!</p>
+            <ul>
+                <li><img src="{{ url_for('static', filename='profile1.png') }}" alt=""> Productivity Hub</li>
+                <li><img src="{{ url_for('static', filename='profile2.png') }}" alt=""> Night Owl Study Club</li>
+                <li><img src="{{ url_for('static', filename='profile3.png') }}" alt=""> Focus Warriors</li>
+                <li><img src="{{ url_for('static', filename='profile4.png') }}" alt=""> Competitive Exam Prep</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

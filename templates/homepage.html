@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study.io - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>📚 STUDY.IO</h2>
+        </div>
+        <a href="{{ url_for('dashboard') }}">🏠 Dashboard</a>
+        <a href="{{ url_for('solo_study') }}">📖 Solo Study</a>
+        <a href="">🎯 Study Goals</a>
+        <a href="">💬 Chat Rooms</a>
+        <a href="">📊 Study Stats</a>
+        <a href="">🏆 Leaderboard</a>
+        <a href="{{ url_for('community') }}">👥 Communities</a>
+        <a href="{{ url_for('index') }}">⚙️ Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <img src="{{ url_for('static', filename='images/study-room.png') }}" alt="Study Room" class="banner-image">
+            <h2>Welcome to Study.io</h2>
+            <p>
+                Enhance your focus and productivity with <b>real-time study rooms, gamified progress tracking, and a supportive community.</b>  
+                Join thousands of students working together towards their goals!
+            </p>
+            <div class="buttons">
+                <a href="{{ url_for('createstudyroom') }}" class="btn">Create Study Room</a>
+                <a href="" class="btn secondary">Join Study Room</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

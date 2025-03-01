@@ -1,0 +1,6 @@
+__pycache__/
+.env
+.vscode/
+instance/
+*.sqlite3
+myenv

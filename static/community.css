@@ -1,0 +1,105 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #2C3E50, #3498db);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Community Section */
+.community-section {
+    padding: 50px 30px;
+    flex-grow: 1;
+}
+
+.community-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Community Card */
+.community-card {
+    background: rgba(255, 255, 255, 0.1);
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.community-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.community-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.community-card h3 {
+    margin: 10px 0;
+}
+
+.community-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.join-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.join-btn:hover {
+    background: #ff4f4f;
+}
+
+/* Footer */
+footer {
+    background: #2C3E50;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}
